@@ -1,14 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Progress navigation</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Change Tab</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <!--
-        Create Tabs component, that has several tab buttons. Each button toggles active tab content.
-        Add a text input with a button. User can enter any tab index in the input and toggle it by clicking the button.
-        Indexes in this task are not the same as they are used in JS, so by entering 1 - first tab should be shown, not 0.
-        If invalid index is entered - browser must show an alert.
-    -->
+    <main>
+        <div id="box">
+            <div id="containerInput">
+                <input class='inputNumber' type="number" placeholder="Enter Tab Index" min="1" max="3">
+                <button class="inputButton">Change Tab</button>
+            </div>
+            <div id="containerSelection">
+                <button>positive</button>
+                <button>negative</button>
+                <button>neutral</button>
+            </div>
+            <p class="selection"></p>
+        </div>
+    </main>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
