@@ -13,10 +13,10 @@ button.addEventListener('click', function() {
     let circle = ajoutElementTexte(inputText.value);
     let count = inputText.value;
     let interval = setInterval(() => {
-        count--
-        circle.innerText = count
+        count--;
+        circle.innerText = count;
         if(count <= 0){
-            clearInterval(interval)
+            clearInterval(interval);
             list.removeChild(circle);   
         }
     }, 1000);
