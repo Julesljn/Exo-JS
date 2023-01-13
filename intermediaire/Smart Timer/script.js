@@ -6,22 +6,19 @@ function ajoutElementTexte(texte){
     let tmp = document.createElement('li');
     tmp.innerHTML = texte;
     list.appendChild(tmp);
+    return tmp // Si pas return "let circle" ne stock rien
 }
 
+button.addEventListener('click', function() {
+    let circle = ajoutElementTexte(inputText.value);
+    let count = inputText.value;
+    let interval = setInterval(() => {
+        count--
+        circle.innerText = count
+        if(count <= 0){
+            clearInterval(interval)
+            list.removeChild(circle);   
+        }
+    }, 1000);
 
-
-// function interval() {
-//     let e = inputText.value;
-//     setInterval(e -= 1, 1000);
-//     console.log(e);
-//     ajoutElementTexte(e);
-// };
-
-setInterval(function(){
-    let e = inputText.value;
-    console.log(e);
-    ajoutElementTexte(e);
-}, 1000);
-
-// button.addEventListener('click', interval);
-button.addEventListener('click', interval);
+});
