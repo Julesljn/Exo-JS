@@ -1,15 +1,28 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Code</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code de validation</title>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <!--
-        Build a verification code form.
-        Focusing on any input should bring the focus to the first empty input.
-        Entering a value should switch the focus to the next input.
-        Deleting a value should delete the last filled value.
-        Submitting the form should alert the submitted code.
-    -->
+    <main>
+        <div id="container">
+            <h1>Enter Code :</h1>
+            <div id="containerCode">
+                <input type="text" maxlength="1" minlength="1" class="1">
+                <input type="text" maxlength="1" minlength="1" class="2" disabled>
+                <input type="text" maxlength="1" minlength="1" class="3" disabled>
+                <div id="trait"></div>
+                <input type="text" maxlength="1" minlength="1" class="4" disabled>
+                <input type="text" maxlength="1" minlength="1" class="5" disabled>
+                <input type="text" maxlength="1" minlength="1" class="6" disabled>
+            </div>
+            <button>Submit</button>
+        </div>
+    </main>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
