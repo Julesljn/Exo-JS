@@ -5,6 +5,7 @@ const media = window.matchMedia('(max-width: 800px)');
 const media2 = window.matchMedia('(min-width: 800px)');
 const screen1 = document.querySelector('.screen1');
 const screen2 = document.querySelector('.screen2');
+const select = document.querySelector('.selectScreen2')
 
 // JS
 
@@ -17,15 +18,18 @@ for(let i = 0; i < input.length; i++) {
         
     })
 }
+
+//Responsive 
+
 window.onload = () => {
     window.addEventListener('resize', () => {
         if(media.matches) {
                 screen1.classList.add('none');
-                screen2.classList.remove('display');
-
+                screen2.classList.remove('none')
         } else if(media2.matches) {
             screen2.classList.add('none');
-            screen1.classList.remove('display')
+            screen1.classList.remove('none');
         }
     })
 }
+console.log()
