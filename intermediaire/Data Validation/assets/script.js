@@ -22,7 +22,7 @@ inputSubmit.addEventListener('click', () => {
     let verifRegexMail = inputMail.value === "" ? false : regexMail.test(inputMail.value);
     let verifStrongPassWord = regexPassWord.test(inputPassword.value);
 
-    (inputName.value == '') ? notValid[0].classList.remove('vanish') : notValid[0].classList.add('vanish');
+    (inputName.value.trim() == '') ? notValid[0].classList.remove('vanish') : notValid[0].classList.add('vanish');
     (!verifRegexMail) ? notValid[1].classList.remove('vanish') : notValid[1].classList.add('vanish');
     (!verifStrongPassWord) ? notValid[2].classList.remove('vanish') : notValid[2].classList.add('vanish');
     (inputConfirmPassword.value !== inputPassword.value) ? notValid[3].classList.remove('vanish') : notValid[3].classList.add('vanish');
