@@ -1,15 +1,19 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <title>Toast</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!--
-        Build a component that shows a toast (notification) with animation on button click.
-        Each toast can have its own message and type (default or error).
-        Toasts should hide automatically after 1.5 seconds.
-        If toast is hovered by mouse - timer should reset and start over again when cursor leaves toast.
-        While one toast is active showing other toasts should be blocked.
-    -->
+    <p class="message1 message">Just a usual message</p>
+    <p class="message2 message">Here is your error</p>
+    <div id="container">
+        <button>Toast Message</button>
+        <button>Toast Alert</button>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
