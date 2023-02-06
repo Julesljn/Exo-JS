@@ -14,9 +14,6 @@ let inputSubmit = document.querySelector('#submitButton');
 const regexMail = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/
 const regexPassWord = /(?=^.{6,}$)((?=.*\w)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[|!"$%&\/\(\)\?\^\'\\\+\-\*]))^.*/;
 
-for(let i = 0; i < notValid.length; i++){
-}
-
 inputSubmit.addEventListener('click', () => {
 
     let verifRegexMail = inputMail.value === "" ? false : regexMail.test(inputMail.value);
