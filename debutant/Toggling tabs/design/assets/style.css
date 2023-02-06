@@ -56,6 +56,10 @@ main p:not(.select):hover {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
+#selectScreen2 {
+    height: 40px;
+    width: 300px;
+}
 @media only screen and (max-width: 800px) {
     
 }

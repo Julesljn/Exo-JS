@@ -5,17 +5,17 @@ const media = window.matchMedia('(max-width: 800px)');
 const media2 = window.matchMedia('(min-width: 800px)');
 const screen1 = document.querySelector('.screen1');
 const screen2 = document.querySelector('.screen2');
-const select = document.querySelector('.selectScreen2')
+const select = document.querySelector('#selectScreen2')
 
 // JS
-
+let valueSelect;
 for(let i = 0; i < input.length; i++) {
     input[i].addEventListener('click', () => {
         for(let e = 0; e < input.length; e++) {
             input[e].classList.remove('select');
         }
         input[i].classList.add('select');
-        
+        select.selectedIndex = i; 
     })
 }
 
@@ -31,5 +31,11 @@ window.onload = () => {
             screen1.classList.remove('none');
         }
     })
-}
-console.log()
+};
+select.addEventListener('change', () => {
+    for(let i = 0; i < input.length; i++) {
+        input[i].classList.remove('select');
+    }
+    input[select.value -1].classList.add('select');
+})
+
