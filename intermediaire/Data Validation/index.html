@@ -10,24 +10,22 @@
 <body>
     <main>
         <div class="containerInput containerName">
-            <label for="name">Name :</label> <p class="vanish notValid">Veuillez saisir votre nom</p>
-            <input class='input' type="text">
+            <label for="name">Name :</label> <p class="notValid notValid1 vanish">Veuillez saisir votre nom</p>
+            <input class='input inputName' type="text">
         </div>
         <div class="containerInput containerMail">
-            <label for="email">Mail :</label>
-            <input class='input' type="text">
-            <p class="vanish notValid">Veuillez saisir une adresse mail correct</p>
+            <label for="email">Mail :</label> <p class="notValid notValid2 vanish">Veuillez saisir une adresse mail correct</p>
+            <input class='input inputMail' type="email">
         </div>
-        <div class="containerInput containerPasseword">
-            <label for="passeword">Passeword :</label>
-            <input class='input' type="password">
-            <p class="vanish notValid">Veuillez saisir un mot de passe correct</p>
+        <div class="containerInput containerPassword">
+            <label for="passeword inputPassword">Password :</label> <p class="notValid notValid3 vanish">Veuillez saisir un mot de passe correct</p>
+            <input class='input inputPassword' type="password">
         </div>
-        <div class="containerInput containerConfirmPasseword">
-            <label for="confirmPasseword">Confirm Passeword :</label>
-            <input class='input' type="password">
-            <p class="vanish notValid">Le mot de passe ne correspond pas</p>
+        <div class="containerInput containerConfirmPassword">
+            <label for="confirmPassword inputConfirmPassword">Confirm Password :</label> <p class="notValid notValid4 vanish">Le mot de passe ne correspond pas</p>
+            <input class='input inputConfirmPassword' type="password">
         </div>
+        <button id="submitButton">Submit</button>
     </main>
     <script src="./assets/script.js"></script>
 </body>
