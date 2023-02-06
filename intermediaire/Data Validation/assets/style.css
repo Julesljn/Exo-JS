@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.vanish {
+    display: none;
+}
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+body {
+    height: 100vh;
+    background: linear-gradient(217deg,#7af3fd,#36bada,#d98aea,#8e33ca);
+    background-size: 240% 240%;
+    animation: gradient-animation 8s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main {
+    width: 650px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 5%;   
+}
+.containerInput {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+}
+.containerName {
+    margin-top: 5%;
+}
+.input {
+    width: 600px;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 4px solid #DBDBDB;
+    margin-left: 25px;
+}
+.notValid {
+    font-size: 15px;
+    margin-left: 25px;
+    color: red;
+}
+.containerInput :nth-child(1) {
+    margin-left: 25px;
+}

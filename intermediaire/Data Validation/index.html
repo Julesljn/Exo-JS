@@ -5,10 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DataValidator</title>
-    <link rel="stylesheet" href="./assets/style.scss">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    
+    <main>
+        <div class="containerInput containerName">
+            <label for="name">Name :</label> <p class="vanish notValid">Veuillez saisir votre nom</p>
+            <input class='input' type="text">
+        </div>
+        <div class="containerInput containerMail">
+            <label for="email">Mail :</label>
+            <input class='input' type="text">
+            <p class="vanish notValid">Veuillez saisir une adresse mail correct</p>
+        </div>
+        <div class="containerInput containerPasseword">
+            <label for="passeword">Passeword :</label>
+            <input class='input' type="password">
+            <p class="vanish notValid">Veuillez saisir un mot de passe correct</p>
+        </div>
+        <div class="containerInput containerConfirmPasseword">
+            <label for="confirmPasseword">Confirm Passeword :</label>
+            <input class='input' type="password">
+            <p class="vanish notValid">Le mot de passe ne correspond pas</p>
+        </div>
+    </main>
     <script src="./assets/script.js"></script>
 </body>
 </html>
