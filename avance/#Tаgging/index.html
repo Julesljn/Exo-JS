@@ -6,15 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tagging</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- <link rel="stylesheet" href="./assets/style.css"> -->
 </head>
 
 <body>
-    <main>
-        <textarea name="text" id="textArea"></textarea>
-    </main>
+    <!-- <main>
+        <div class="color">
+            <p>test</p>
+        </div>
+        <textarea name="text" class ="textArea"></textarea>
+    </main> -->
 
-    <script src="./assets/script.js"></script>
+    <input type="text" id="myInput">
+
+<script>
+const input = document.getElementById("myInput");
+
+function highlightWords() {
+  const text = input.value;
+  let highlightedText = "";
+  let lastIndex = 0;
+
+  // Recherche chaque mot à surligner
+  const regex = /(^|\s)(#\w+)/g;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    // Ajoute le texte avant le mot à surligner
+    const start = match.index + match[1].length;
+    highlightedText += text.slice(lastIndex, start);
+
+    // Remplace le mot par une version surlignée
+    const end = start + match[2].length;
+    const highlighted = `<span class='red'>${match[2]}</span>`;
+    highlightedText += highlighted;
+
+    lastIndex = end;
+  }
+
+  // Ajoute le reste du texte à l'inputText
+  highlightedText += text.slice(lastIndex);
+  input.value = highlightedText;
+}
+
+input.addEventListener("input", highlightWords);
+</script>
+
+
+    <!-- <script src="./assets/script.js"></script> -->
 </body>
 
 </html>

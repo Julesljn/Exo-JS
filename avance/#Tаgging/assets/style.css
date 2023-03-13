@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
 .ashtag {
     background-color: #F06C9B;
@@ -12,14 +14,28 @@ main {
     align-items: center;
     justify-content: center;
 }
-#textArea {
-    height: 300px;
+.red {
+    background-color: red;
+}
+.textArea {
+    background-color: white;
     width: 900px;
+    height: 300px; 
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     resize: none;
     font-size: 20px;
+    position: absolute;
+    z-index: 0;
 }
 #textArea:focus {
     outline: none;
+}
+.color {
+    pointer-events: none;
+    width: 900px;
+    height: 300px;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
 }
