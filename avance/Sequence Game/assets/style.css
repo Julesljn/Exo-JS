@@ -1,34 +1,47 @@
-.rectangle {
-    position: absolute;
-    width  : 200px;
-    height : 150px;
-    background : green;
-    top: 5vh;
-    left: 10vw;
+* {
+    margin: 0;
+    padding: 0;
 }
-.triangle {
-    position: absolute;
-    height : 0;
-    width : 0;
-    border-right : 110px solid transparent;
-    border-bottom : 150px solid red;
-    border-left : 110px solid transparent;
-    top: 10vh;
-    left: 50vw;
+.active {
+    border: black 5px solid;
 }
-.cercle {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 1000px;
-    background: blue;
-    top: 50vh;
-    right: 30vw;
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.button {
+.main__form {
     position: absolute;
-    bottom: 30vh;
+}
+.main__rectangle {
+    width: 6vw;
+    height: 35vh;
+    background-color: #23DA79;
     left: 20vw;
-    width: 10vw;
-    height: 3vh;
+    top: 10vh;
+    border-radius: 0.5vw;
+}
+.main__rectangle2 {
+    width: 25vw;
+    height: 10vh;
+    background-color: #446FEA;
+    left: 20vw;
+    bottom: 10vh;
+    border-radius: 0.5vw;
+}
+.main__circle {
+    width: 250px;
+    height: 250px;
+    background-color: #FB5159;
+    right: 20vw;
+    bottom: 40vh;
+    border-radius: 100%;
+}
+.main__score {
+    position: absolute;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
 }
