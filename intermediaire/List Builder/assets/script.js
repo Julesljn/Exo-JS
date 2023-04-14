@@ -1,25 +1,12 @@
-let arrayFood = [];
+const select = document.querySelector('.card__selected');
+const checkAll = document.querySelector('.card__checkAll');
+const list = document.querySelectorAll('.card__list');
 
-//Dom Element
+let arraySelect = [];
 
-let buttons = document.querySelectorAll('.foodList > p');
-let foodText = document.querySelector('.foodDom');
-
-// Js
-
-function ajoutElementTexte(texte){
-    let tmp = document.createElement('span');
-    tmp.innerHTML = texte;
-    foodText.appendChild(tmp);
-}
-
-for(let i = 0; i < buttons.length; i++){
-    buttons[i].addEventListener('click', function() {
-        arrayFood.push(buttons[i].textContent);
-        console.log(arrayFood);
-        for(let e = 0; e < arrayFood.length; e++){
-            ajoutElementTexte(arrayFood[e]);
-         } 
-         arrayFood = [];
+for(let i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', () => {
+        arraySelect.push(list[i].value);
+        console.log(arraySelect);
     });
 };
